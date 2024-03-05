@@ -8,6 +8,8 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+        private static Die newDice = new Die();
+        private static Testing debug = new Testing();
         public void gameLoop()
         {
             int i = 1;
@@ -16,21 +18,17 @@ namespace CMP1903_A1_2324
             int timesToRoll = 3;
             while (i <= timesToRoll)
             {
-                Die newDice = new Die();
-                Testing debug = new Testing();
+                
                 int rollDice = newDice.rollDice();
                 Console.WriteLine($"Dice " + i + ": " + rollDice);
                 debug.Assert(rollDice);
                 list.Add(rollDice);
-                System.Threading.Thread.Sleep(1);
                 i++;
             }
 
-            Testing resultsCheck = new Testing();
-            int result = 0;
-            foreach (var item in list) { result += item; }
+            int result = list.Sum();
             Console.WriteLine($"\nSum: {result}");
-            resultsCheck.AssertSum(result);
+            debug.AssertSum(result);
         }
 
     }
