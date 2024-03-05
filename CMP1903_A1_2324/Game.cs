@@ -19,7 +19,7 @@ namespace CMP1903_A1_2324
             while (i <= timesToRoll)
             {
                 
-                int rollDice = newDice.rollDice();
+                int rollDice = newDice.Roll();
                 Console.WriteLine($"Dice " + i + ": " + rollDice);
                 debug.Assert(rollDice);
                 list.Add(rollDice);
