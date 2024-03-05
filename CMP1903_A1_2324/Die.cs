@@ -17,12 +17,16 @@ namespace CMP1903_A1_2324
         Random random = new Random();
 
         private int rollIt;
-        public int RollIt
+        public int RollIt // Usage of encapsulating values.
         {
             get { return rollIt; }
             set { rollIt = value; }
         }
 
+        /// <summary>
+        /// This creates a random number between 1 and 6 for each roll of the dice.
+        /// </summary>
+        /// <returns></returns>
         public int Roll()
         {
             int rollIt = random.Next(1, 7);

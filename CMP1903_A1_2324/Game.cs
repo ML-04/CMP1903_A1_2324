@@ -19,17 +19,14 @@ namespace CMP1903_A1_2324
         /// </summary>
         public void game()
         {
-            // Creates variables for the loop.
-            int i = 1;
+            //This rolls the dice for a number of times in a loop and inserts the results into a list.
             var list = new List<int> { };
-            int j = 3;
-            while (i <= j)
+            for (int i = 1; i <= 3; i++) 
             {
                 int rollDice = newDice.Roll();
                 Console.WriteLine($"Dice " + i + ": " + rollDice);
                 debug.Assert(rollDice);
-                list.Add(rollDice);
-                i++;
+                list.Add(rollDice); // Adds the result to the list.
             }
 
             int result = list.Sum(); // This calculates the sum of all of the die and shows the results in the console.
