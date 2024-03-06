@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
             while (true)
             {
                 Console.Write("Would you like to roll the dice? (Y or N)");
-                string reRoll = Console.ReadLine();
+                string reRoll = Console.ReadLine(); // This waits for the user to enter something inside the console and to press Enter, it then stores the entered characters as a string.
 
                 switch (reRoll) // This checks which key the user input.
                 {
