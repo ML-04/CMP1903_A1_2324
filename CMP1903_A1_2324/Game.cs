@@ -11,7 +11,7 @@ namespace CMP1903_A1_2324
     /// </summary>
     internal class Game
     {
-        private static Die newDice = new Die();
+        private static Die newDie = new Die();
         private static Testing debug = new Testing();
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace CMP1903_A1_2324
             var list = new List<int> { };
             for (int i = 1; i <= 3; i++) 
             {
-                int rollDice = newDice.Roll();
+                int rollDice = newDie.Roll();
                 Console.WriteLine($"Dice " + i + ": " + rollDice);
                 debug.Assert(rollDice);
                 list.Add(rollDice); // Adds the result to the list.
