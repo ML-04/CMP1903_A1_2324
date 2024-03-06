@@ -16,11 +16,11 @@ namespace CMP1903_A1_2324
 
         Random random = new Random();
 
-        private int rollIt;
-        public int RollIt // Usage of encapsulating values.
+        private int rollOutcome;
+        public int RollOutcome // Usage of encapsulating values.
         {
-            get { return rollIt; }
-            set { rollIt = value; }
+            get { return rollOutcome; }
+            set { rollOutcome = value; }
         }
 
         /// <summary>
@@ -29,8 +29,8 @@ namespace CMP1903_A1_2324
         /// <returns></returns>
         public int Roll()
         {
-            int rollIt = random.Next(1, 7);
-            return rollIt;
+            int rollOutcome = random.Next(1, 7);
+            return rollOutcome;
         }
     }
 }
