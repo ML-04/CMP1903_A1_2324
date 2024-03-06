@@ -16,12 +16,14 @@ namespace CMP1903_A1_2324
 
         private int rollOutcome;
         public int RollOutcome // Usage of encapsulating values.
+
         
-        Random random = new Random();
         {
             get { return rollOutcome; }
             set { rollOutcome = value; }
         }
+
+        Random random = new Random();
 
         /// <summary>
         /// This creates a random number between 1 and 6 for each roll of the dice.
