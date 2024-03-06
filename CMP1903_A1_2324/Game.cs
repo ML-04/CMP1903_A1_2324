@@ -6,16 +6,33 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// This creates the dice roll.
+    /// </summary>
     internal class Game
     {
-        /*
-         * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
-         *
-         * EXTRA: For extra requirements (these aren't required though), the dice rolls could be managed so that the
-         * rolls could be continous, and the totals and other statistics could be summarised for example.
-         */
+        private static Die newDie = new Die();
+        private static Testing debug = new Testing();
 
-        //Methods
+        /// <summary>
+        /// This gathers each die's number and calculates the sum of them all.
+        /// </summary>
+        public void game()
+        {
+            //This rolls the dice for a number of times in a loop and inserts the results into a list.
+            var list = new List<int> { };
+            for (int i = 1; i <= 3; i++) 
+            {
+                int rollDice = newDie.Roll();
+                Console.WriteLine($"Dice " + i + ": " + rollDice);
+                debug.Assert(rollDice);
+                list.Add(rollDice); // Adds the result to the list.
+            }
+
+            int result = list.Sum(); // This calculates the sum of all of the die and shows the results in the console.
+            Console.WriteLine($"\nSum: {result}");
+            debug.AssertSum(result); // This checks if the sum is correct.
+        }
 
     }
 }

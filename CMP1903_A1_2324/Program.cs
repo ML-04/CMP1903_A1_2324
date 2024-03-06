@@ -8,12 +8,32 @@ namespace CMP1903_A1_2324
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
-            /*
-             * Create a Game object and call its methods.
-             * Create a Testing object to verify the output and operation of the other classes.
-             */
+
+            while (true)
+            {
+                Console.Write("Would you like to roll the dice? (Y or N)");
+                string reRoll = Console.ReadLine(); // This waits for the user to enter something inside the console and to press Enter, it then stores the entered characters as a string.
+
+                switch (reRoll) // This checks which key the user input.
+                {
+                    case "Y": // This runs the main program if the users input is Y.
+                        Game game = new Game();
+                        game.game();
+                        continue;
+
+                    case "N": // This ends the loop if the users input is N.
+                        break;
+
+                    default: // This is the first thing shown to the user.
+                        Console.WriteLine("Please enter 'Y' or 'N'");
+                        continue;
+                }
+                break; 
+            }
+
         }
     }
 }
