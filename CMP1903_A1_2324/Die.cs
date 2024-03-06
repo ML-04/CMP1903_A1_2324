@@ -14,10 +14,10 @@ namespace CMP1903_A1_2324
         * and one method that rolls the die, returns and integer and takes no parameters.
          */
 
-        Random random = new Random();
-
         private int rollOutcome;
         public int RollOutcome // Usage of encapsulating values.
+        
+        Random random = new Random();
         {
             get { return rollOutcome; }
             set { rollOutcome = value; }
